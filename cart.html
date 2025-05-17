@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - Secret Shop</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+
+    <!-- Cart Section -->
+    <section style=" min-height:1000px;" class="products-section py-100 ">
+        
+        <div class="cartq">
+            <a href="index.html">Вернуться на главную страницу</a>
+        </div>
+        <div class="container">
+            
+            <h2 class="text-center  mb-4">Товары в вашей корзине</h2>
+            <div id="cart-items" class="row">
+                <!-- Товары добавляются через JS -->
+            </div>
+            <div class="text-right">
+                <h4>Итого: <span id="total-price">0</span> ₽</h4>
+            </div>
+
+            <div class="text-center mt-4 ">
+               
+                <button class="btn btn-success" onclick="proceedToCheckout()">Оформить покупку</button><br><br>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Checkout Form Modal -->
+    <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="checkoutModalLabel">Оформление заказа</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="checkout-form">
+                        <div class="form-group">
+                            <label for="fullname">ФИО</label>
+                            <input type="text" class="form-control" id="fullname" placeholder="Введите ФИО" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Адрес</label>
+                            <input type="text" class="form-control" id="address" placeholder="Введите адрес" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="postal-code">Индекс</label>
+                            <input type="text" class="form-control" id="postal-code" placeholder="Введите индекс" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="delivery-date">Желаемая дата доставки</label>
+                            <input type="date" class="form-control" id="delivery-date" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+                    <button type="button" class="btn btn-primary" onclick="submitOrder()">Подтвердить заказ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navigation-section text-center py-4">
+        <h5 class="mb-3">ЗАБОТА О КЛИЕНТАХ</h5>
+        <div>
+            <a href="index.html" class="text-green">Главная страница</a> |
+            <a href="faq.html" class="text-green">Вопросы и ответы</a> |
+            <a href="contacts.html" class="text-green">Контакты</a> |
+            <a href="returns.html" class="text-green">Возвраты и обмены</a> |
+            <a href="refund_policy.html" class="text-green">Политика Возврата денежных Средств</a> 
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> <!-- Используем полноценный jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script> <!-- Подключаем script.js -->
+</body>
+</html>

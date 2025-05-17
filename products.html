@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="products.js" defer></script>
+    <script src="cart.js" defer></script>
+    <script src="promo.js" defer></script>
+</head>
+<body>
+    <div class="products">
+        <div class="product">
+            <img src="product1.jpg" alt="Product 1">
+            <h4>Товар 1</h4>
+            <p>Цена: $50</p>
+            <button onclick="addToCart('Товар 1', 50)">Добавить в корзину</button>
+        </div>
+        <div class="product">
+            <img src="product2.jpg" alt="Product 2">
+            <h4>Товар 2</h4>
+            <p>Цена: $75</p>
+            <button onclick="addToCart('Товар 2', 75)">Добавить в корзину</button>
+        </div>
+        <!-- Добавьте другие товары здесь -->
+    </div>
+    <div class="actions">
+        <input type="text" id="promo-code-input" placeholder="Введите промо-код">
+        <button type="button" onclick="applyPromoCode()">Применить промокод</button>
+        <a href="cart.html"><input=<button>Оформить</button></a>
+    </div>
+</body>
+</html>

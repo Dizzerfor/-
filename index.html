@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - Secret Shop</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+
+
+    <!-- Categories Section -->
+    <section class="products-section py-5"style="position: relative;" id="Main">
+        
+        <div class="container" >
+             
+            <h2 class="text-center mb-4" id="int13">The International 13 Secret Shop</h2>
+            <div class="cartqq"><a href="cart.html">
+                Корзина (<span id="cart-count">0</span>)
+           </a></div>
+           <div class="products-container bg-white p-4">
+            <p class="silki"><a href="#Main">Main</a> | <a href="#category">Event Collection</a> | <a href="#accs">Event Accessories</a> | <a href="#ti13">TI13 PLUSH</a> | <a href="#cafe">Dota Cafe</a></p>
+            
+            <div class="category-image text-center py-4" id="category">
+                <img src="https://int.dota2secretshop.com/cdn/shop/files/TI13_Event_Collection_-_Web_Banner_e9cdc71a-cea8-40b3-80a3-2bdfe61b98d4.png?v=1724267882" alt="Category Banner" class="img-fluid">
+            </div>
+            <!-- Category 1: Одежда -->
+            <div class="category">
+                
+                <h3 class="category-title text-center"></h3>
+                <div class="row" id="clothing-list">
+                    <!-- Товары добавляются через JS -->
+                </div>
+            </div>
+
+            <!-- Category Image -->
+            <div class="category-image text-center py-4" id="accs">
+                <img src="https://int.dota2secretshop.com/cdn/shop/files/TI13_Event_Accessories_Banner_-_Web_V2_c719f5d7-e74e-45e8-b236-240cb7e62e93.png?v=1724364096" alt="Category Banner" class="img-fluid">
+            </div>
+
+            <!-- Category 2: Аксессуары -->
+            <div class="category" >
+                <h3 class="category-title text-center"></h3>
+                <div class="row" id="accessories-list">
+                    <!-- Товары добавляются через JS -->
+                </div>
+            </div>
+
+            <!-- Category Image -->
+            <div class="category-image text-center py-4 " id="ti13">
+                <img src="https://int.dota2secretshop.com/cdn/shop/files/TI13_Plush_-_Web.png?v=1724364100" alt="Category Banner" class="img-fluid">
+            </div>
+
+            <!-- Category 3: Игрушки -->
+            <div class="category">
+                <h3 class="category-title text-center"></h3>
+                <div class="row" id="toys-list">
+                    <!-- Товары добавляются через JS -->
+                </div>
+            </div>
+            <!-- Category Image -->
+            <div class="category-image text-center py-4" id="cafe">
+                <img src="https://int.dota2secretshop.com/cdn/shop/files/TI13_Dota_Cafe_Banner_-_Web_678dd3de-7863-40eb-b589-377e778f7389.png?v=1724185192" alt="Category Banner" class="img-fluid">
+            </div>
+
+            <!-- Category 4: Cafe -->
+            <div class="category">
+                <h3 class="category-title text-center"></h3>
+                <div class="row" id="cafes-list">
+                    <!-- Товары добавляются через JS -->
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <div class="navigation-section text-center py-4">
+        <h5 class="mb-3">ЗАБОТА О КЛИЕНТАХ</h5>
+        <div>
+            <a href="faq.html" class="text-green">Вопросы и ответы</a> |
+            <a href="contacts.html" class="text-green">Контакты</a> |
+            <a href="returns.html" class="text-green">Возвраты и обмены</a> |
+            <a href="refund_policy.html" class="text-green">Политика Возврата денежных Средств</a> 
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+
+ <!-- Chat Button -->
+<div id="chat-button" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+    <button class="btn btn-primary" id="openChatBtn">
+        <i class="fas fa-comments"></i> Чат с менеджером
+    </button>
+</div>
+
+<!-- Chat Modal -->
+<div id="chatModal" class="chat-modal" style="display: none;">
+    <div class="chat-header">
+        <img src="https://experts.webasyst.ru/wa-data/public/contacts/photos/36/81/808136/1926562376.20x20@2x.jpg" alt="Менеджер" id="manager-avatar" class="manager-avatar">
+        <h5>Менеджер: <span id="manager-name">Иван</span> (<span id="manager-status">В сети</span>)</h5>
+        <button type="button" class="close" id="closeChatBtn">
+            <i class="fas fa-times"></i> <!-- Иконка закрытия -->
+        </button>
+    </div>
+    <div class="chat-body">
+        <div class="mb-3">
+            <label for="chat-user-name">Имя:</label>
+            <input type="text" class="form-control" id="chat-user-name" placeholder="Введите ваше имя" required>
+        </div>
+        <div class="mb-3">
+            <label for="chat-user-email">Email:</label>
+            <input type="email" class="form-control" id="chat-user-email" placeholder="Введите ваш email" required>
+        </div>
+        <div id="chat-messages" class="chat-messages" style=" max-height: 300px; overflow-y: auto;"></div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="chat-input" placeholder="Введите сообщение..." aria-label="Введите сообщение..." required>
+            <div class="input-group-append">
+                <button class="btn btn-primary" id="sendMessageBtn">Отправить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> <!-- Используем полноценный jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script> <!-- Подключаем script.js -->
+</body>
+</html>

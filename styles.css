@@ -1,0 +1,655 @@
+/* Общий зеленый стиль */
+.bg-green {
+    background-color: #006400;
+}
+
+/* Логотип по центру, поверх фонового изображения */
+.header {
+    background: url('') no-repeat center center;
+    background-size: cover;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+
+.logo-image {
+    max-width: 150px;
+    z-index: 10;
+}
+/* Стиль для кнопки "Оформить покупку" */
+.btn-success {
+    background: linear-gradient(135deg, #28a745 0%, #218838 100%);
+    color: white;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 25px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+    border: none;
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #34ce57 0%, #1e7e34 100%);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(-3px);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: space-between; /* Space between the text and button */
+    align-items: flex-start; /* Align text to the left */
+    height: 100%; /* Ensure the body fills the card */
+    background-color: transform 0.3s ease-in-out;
+}
+
+.card-body h5, .card-body p {
+    margin-bottom: 10px; /* Add some space between text elements */
+}
+
+.card-body button {
+    align-self: flex-end; /* Ensure the button stays on the right */
+}
+
+/* Иконка корзины */
+.cart-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.cartq{
+    text-align: right;
+    padding: 1px;
+    
+}
+/* Стили для кнопки корзины */
+.cartq a {
+    display: inline-block;
+    position: relative;
+    background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+.cartqq{
+    text-align: right;
+    padding: 1px;
+    
+}
+.cartqq a {
+    display: inline-block;
+    position: relative;
+    background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.cart a:hover {
+    background: linear-gradient(135deg, #00ff87 0%, #00d8ff 100%);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
+}
+
+.cart-image {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('https://int.dota2secretshop.com/cdn/shop/files/hero-background.webp') no-repeat center center fixed;
+    background-size: cover;
+    height: 20vh;
+    color: #e0f7fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Products section with black gradient at the bottom */
+.products-section {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('https://liquipedia.net/commons/images/2/20/International_2013_Loading_Screen.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 50px 0;
+    color: white;
+    z-index: 10;
+}
+
+
+/* Основное окно чата */
+.chat-modal {
+    position: fixed;
+    bottom: 80px; /* Чтобы не перекрывать кнопку */
+    right: 20px;
+    width: 400px; /* Увеличиваем ширину окна */
+    background-color: #f9f9f9; /* Светлый фон */
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    z-index: 1001; /* Поверх всех других элементов */
+    transition: all 0.3s ease;
+    padding: 15px; /* Увеличенные отступы */
+}
+
+/* Заголовок окна чата */
+.chat-header {
+    display: flex;
+    align-items: center; /* Вертикальное выравнивание */
+    border-bottom: 1px solid #ccc; /* Нижняя граница */
+    padding-bottom: 10px; /* Отступ снизу */
+    position: relative; /* Относительное позиционирование для кнопки закрытия */
+}
+
+.close {
+    position: absolute; /* Абсолютное позиционирование */
+    right: 10px; /* Отступ от правого края */
+    top: 10px; /* Отступ от верхнего края */
+    border: none; /* Убираем границу */
+    background: none; /* Убираем фон */
+    font-size: 24px; /* Размер шрифта для иконки */
+    cursor: pointer; /* Указатель при наведении */
+    color: #007bff; /* Цвет иконки */
+}
+
+.close:hover {
+    color: #0056b3; /* Темнее при наведении */
+}
+/* Аватарка менеджера */
+.manager-avatar {
+    border-radius: 50%; /* Круглая форма */
+    margin-right: 10px; /* Отступ справа */
+    border: 2px solid #007bff; /* Граница вокруг аватарки */
+}
+
+/* Тело чата */
+.chat-body {
+    margin-top: 10px;
+    max-height: 400px; /* Ограничиваем высоту чата */
+    overflow-y: auto; /* Добавляем прокрутку, если сообщения превышают высоту */
+    padding-top: 10px; /* Отступ сверху для отделения */
+}
+
+/* Сообщения в чате */
+.chat-messages {
+    margin-bottom: 10px;
+}
+
+/* Оформление для сообщений */
+.chat-message {
+    margin: 5px 0;
+    padding: 10px; /* Увеличенные отступы */
+    border-radius: 10px; /* Закругленные углы */
+    font-size: 14px; /* Увеличенный шрифт */
+}
+
+/* Оформление сообщений менеджера */
+.chat-message.manager {
+    background-color: #e7f3fe; /* Цвет для сообщений менеджера */
+    border-left: 4px solid #007bff; /* Отделение для сообщений менеджера */
+}
+
+/* Оформление сообщений пользователя */
+.chat-message.user {
+    background-color: #d4edda; /* Цвет для сообщений пользователя */
+    border-right: 4px solid #28a745; /* Отделение для сообщений пользователя */
+}
+
+/* Стиль для полей ввода */
+.input-group {
+    width: 100%;
+}
+
+/* Стиль для кнопки отправки сообщения */
+.input-group-append .btn {
+    border-radius: 5px; /* Закругленные углы для кнопки */
+    background-color: #007bff; /* Цвет кнопки */
+    color: white; /* Цвет текста */
+}
+
+.input-group-append .btn:hover {
+    background-color: #0056b3; /* Темнее при наведении */
+}
+
+
+.products-section h2, .products-section .category-title {
+    color: #ffffff;
+}
+
+.category {
+    margin-bottom: 40px;
+}
+
+.category-title {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.category-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Card Styling */
+.card {
+    border: 1px solid #ffffff;
+    color: black;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    background-color: #f2f2f2;
+
+
+}
+
+.product1 img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.product1:hover img {
+    content: url('https://int.dota2secretshop.com/cdn/shop/files/TI13EventHoodie-Corrected-9-13-24-Back_2048x2048.png?v=1726257343');
+    transform: scale(1.05);
+}
+.product2 img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.product2:hover img {
+    content: url('https://int.dota2secretshop.com/cdn/shop/files/IMG-9119_7f02cf8a-2647-48ac-9cff-c1e3748a3589_large.png?v=1724437667');
+    transform: scale(1.05);
+}
+.product3 img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.product3:hover img {
+    content: url('https://int.dota2secretshop.com/cdn/shop/files/Ti13_Event_Jacket_-_Back_-_8-21-24_large.png?v=1724267015');
+    transform: scale(1.05);
+}
+.product4 img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.product4:hover img {
+    content: url('https://int.dota2secretshop.com/cdn/shop/files/gaming-mouse-pad-white-36x18-front-66c79b869d42b_grande.png?v=1724357519');
+    transform: scale(1.05);
+}
+.product5 img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.product5:hover img {
+    content: url('https://int.dota2secretshop.com/cdn/shop/files/TI13Keycaps-02_large.jpg?v=1725398843');
+    transform: scale(1.05);
+}
+.product6 img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.product6:hover img {
+    content: url('https://int.dota2secretshop.com/cdn/shop/files/all-over-print-utility-crossbody-bag-white-product-details-3-66c79c7bb8a83_large.png?v=1724357778');
+    transform: scale(1.05);
+}
+.product7 img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.product7:hover img {
+    content: url('https://int.dota2secretshop.com/cdn/shop/files/pudgeplush-02_large.jpg?v=1724351445');
+    transform: scale(1.05);
+}
+.product8 img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.product8:hover img {
+    content: url('https://int.dota2secretshop.com/cdn/shop/files/witchdoctorplush-02_large.jpg?v=1724351250');
+    transform: scale(1.05);
+}
+.product9 img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.product9:hover img {
+    content: url('https://int.dota2secretshop.com/cdn/shop/files/black-glossy-mug-black-15-oz-handle-on-left-66bfe6a88d4f8_large.png?v=1723852470');
+    transform: scale(1.05);
+}
+.product10 img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.product10:hover img {
+    content: url('https://int.dota2secretshop.com/cdn/shop/files/gaming-mouse-pad-white-36x18-front-66c79fe37e706_large.png?v=1724359151');
+    transform: scale(1.05);
+}
+.product11 img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.product11:hover img {
+    content: url('https://int.dota2secretshop.com/cdn/shop/files/unisex-classic-tee-natural-right-66c543e61e55b_2048x2048.png?v=1724204044');
+    transform: scale(1.05);
+}
+.product12 img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.product12:hover img {
+    content: url('https://int.dota2secretshop.com/cdn/shop/files/all-over-print-utility-crossbody-bag-white-product-details-3-66bfecf545ade_grande.png?v=1723854095');
+    transform: scale(1.05);
+}
+
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    border-radius: 10px 10px 0 0;
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+
+    .cart-image {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Cart Section */
+
+/* Улучшение стиля карточек товаров в корзине */
+.cart-section .card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    transition: transform 0.2s ease-in-out;
+    margin-bottom: 10px;
+    padding: 15px;
+    max-width: 100%;
+}
+
+.cart-section .card-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px; /* Компактные внутренние отступы */
+}
+
+.cart-section .card-body img {
+    border-radius: 8px;
+    width: 100px; /* Увеличиваем ширину изображения */
+    height: auto;
+    margin-right: 10px;
+}
+
+.cart-section .card-body div {
+    flex-grow: 1;
+    padding-left: 10px; /* Добавляем немного отступа слева */
+}
+
+/* Увеличиваем шрифт названия товара */
+.cart-section .card-title {
+    font-size: 1.25rem; /* Увеличиваем размер шрифта */
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+.cart-section .card-text {
+    font-size: 1.1rem; /* Увеличиваем размер цены */
+    font-weight: bold;
+    color: #666;
+}
+
+.cart-section .btn-danger {
+    background-color: #ff5a5f;
+    border: none;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.cart-section .btn-danger:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+/* Изменение общего размера карточек */
+#cart-items .col-lg-4, #cart-items .col-md-6, #cart-items .col-sm-12 {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 10px;
+}
+
+
+/* Стиль карточек товаров в корзине */
+#cart-items .card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+#cart-items .card:hover {
+    transform: scale(1.02);
+}
+
+
+
+.navigation-section {
+    background-color: #000000; /* Светлый фон для секции */
+    padding: 120px; /* Внутренние отступы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+.navigation-section a {
+    color: #4CAF50; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+    margin: 0 10px; /* Отступы между ссылками */
+}
+
+.navigation-section a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+.text-green {
+    color: #4CAF50; /* Цвет текста, соответствующий ссылкам */
+}
+
+
+
+
+#cart-items .card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+#cart-items .card-body img {
+    border-radius: 8px;
+    width: 150px; /* Увеличьте ширину изображения */
+    height: auto; /* Сохраняйте пропорции */
+}
+
+#cart-items .card-title {
+    font-size: 1.25rem; /* Увеличьте размер шрифта для названия товара */
+    font-weight: bold;
+}
+
+#cart-items .card-text {
+    font-size: 1.15rem; /* Увеличьте размер шрифта для цены */
+    color: #666;
+}
+
+#cart-items .btn-danger {
+    background-color: #dc3545;
+    border: none;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+}
+
+#cart-items .btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Улучшенный стиль карточек товаров в корзине */
+.cart-section .card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    transition: transform 0.2s ease-in-out;
+    margin-bottom: 10px;
+    padding: 15px;
+    max-width: 100%;
+}
+.cart-section .card-body {
+    display: flex;
+    align-items: center; /* Выровнять по вертикали */
+    justify-content: space-between;
+    padding: 10px;
+}
+.cart-section .card-body img {
+    border-radius: 10px;
+    width: 150px; /* Увеличиваем ширину изображения */
+    height: auto;
+    margin-right: 20px; /* Отступ между изображением и текстом */
+}
+
+.cart-section .card-body div {
+    flex-grow: 1;
+    padding-left: 10px;
+}
+
+.cart-section .card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 5px; /* Меньший отступ между заголовком и текстом */
+}
+
+.cart-section .card-text {
+    font-size: 5px; /* Крупнее цена */
+    font-weight: bold;
+    color: #444;
+    margin: 0; /* Убираем лишние отступы */
+}
+.cart-section .btn-danger {
+    background-color: #ff5a5f;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.cart-section .btn-danger:hover {
+    background-color: #ff2e3a;
+}
+
+/* Уменьшение отступов между колонками */
+#cart-items .col-lg-4, #cart-items .col-md-6, #cart-items .col-sm-12 {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 15px; /* Чуть увеличенный отступ для визуального разделения */
+}
+#cart-items {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.cart-section {
+    background: url('https://int.dota2secretshop.com/cdn/shop/files/hero-background.webp') no-repeat center center fixed;
+    padding: 50px 0;
+    background-color: #f1f1f1;
+}
+
+.cart-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.cart-section .card {
+    background-color: #fff;
+}
+
+.cart-section .card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-section .btn-danger {
+    background-color: #dc3545;
+    border: none;
+}
+
+.cart-section .btn-danger:hover {
+    background-color: #c82333;
+}
+
+.text-right h4 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+.products-container {
+    display: flex; /* Используем flexbox для внутреннего размещения */
+    flex-direction: column; /* Расположение элементов по колонкам */
+    align-items: center; /* Центрируем содержимое по горизонтали */
+    background-color: white; /* Белый фон */
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    padding: 20px; /* Отступы внутри контейнера */
+    margin-top: 20px; /* Отступ сверху */
+    width: auto; /* Ширина подстраивается под содержимое */
+}
+
+
+.silki a {
+    text-decoration: none; /* Убирает подчеркивание */
+    color: #8B4513; /* Цвет текста по умолчанию */
+    padding: 5px 10px; /* Немного отступов вокруг текстов для лучшего эффекта */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+    text-transform: uppercase;
+    font-size: 18px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.silki a:hover {
+    background-color: #8B4513; /* Коричневый цвет для фона */
+    color: white; /* Белый цвет текста при наведении */
+}
+#int13{
+    color: white;/* Ярко-желтые ссылки */
+    text-decoration: none;
+}
