@@ -1,0 +1,246 @@
+/* Общие стили */
+body {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Фон с анимированными частицами */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #1a1a1a 30%, #2a0d0d 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.particle {
+    position: absolute;
+    background: rgba(255, 68, 68, 0.3);
+    border-radius: 50%;
+    animation: float 25s infinite linear;
+    transition: all 1s ease;
+}
+
+@keyframes float {
+    0% { 
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 0.6;
+    }
+    50% { 
+        transform: translateY(-80vh) translateX(60vw) rotate(180deg);
+        opacity: 0.3;
+    }
+    100% { 
+        transform: translateY(0) translateX(100vw) rotate(360deg);
+        opacity: 0.6;
+    }
+}
+
+/* Основной контейнер формы */
+.auth-box {
+    background: rgba(15, 15, 15, 0.95);
+    backdrop-filter: blur(12px);
+    padding: 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 480px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 68, 68, 0.3);
+    margin: 20px;
+    transform-origin: center;
+}
+
+/* Переключатель форм */
+.switch {
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.switch::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background: rgba(255, 68, 68, 0.2);
+}
+
+.switch button {
+    background: none;
+    border: 2px solid transparent;
+    padding: 12px 40px;
+    font-size: 1.1rem;
+    color: #888;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    font-family: 'Orbitron', sans-serif;
+}
+
+.switch .active {
+    color: #ff4444;
+    border-color: #ff4444;
+    background: rgba(255, 68, 68, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 68, 68, 0.2);
+}
+
+/* Контейнер для форм */
+.form-container {
+    position: relative;
+    min-height: 300px;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирование по горизонтали */
+}
+/* Стили форм */
+#loginForm,
+#registerForm {
+    position: absolute;
+    width: calc(100% - 80px);
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    pointer-events: none;
+    filter: blur(2px);
+}
+
+#loginForm.active,
+#registerForm.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+    pointer-events: all;
+}
+
+/* Поля ввода */
+form input {
+    width: 100%;
+    padding: 14px 20px 14px 50px;
+    margin: 15px 0;
+    border: 1px solid rgba(255, 68, 68, 0.4);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: rgba(40, 40, 40, 0.8);
+    color: #fff;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+form input:focus {
+    border-color: #ff4444;
+    box-shadow: 0 0 15px rgba(255, 68, 68, 0.3);
+    background-color: rgba(50, 50, 50, 0.9);
+}
+
+/* Иконки для полей */
+#loginUsername { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23888"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>'); }
+#loginPassword { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23888"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>'); }
+#registerUsername { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23888"><path d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 10c2.7 0 5.8 1.29 6 2H6c.23-.72 3.31-2 6-2z"/></svg>'); }
+#registerPassword { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23888"><path d="M12 3c-2.76 0-5 2.24-5 5v1.1L6.1 13H5v9h14v-9h-1.1L17 9.1V8c0-2.76-2.24-5-5-5zm2 9.1V11H10v1.1l-2 2V16h8v-1.9l-2-2zM12 5c1.66 0 3 1.34 3 3v1H9V8c0-1.66 1.34-3 3-3z"/></svg>'); }
+
+/* Кнопки */
+form button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #ff2d2d, #cc2424);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+form button:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 68, 68, 0.4);
+}
+
+/* Сообщения об ошибках и успехе */
+.error {
+    color: #ff4444;
+    font-size: 0.9rem;
+    margin: 12px 0;
+    text-align: center;
+    animation: shake 0.4s ease;
+}
+
+.success {
+    color: #4CAF50;
+    font-size: 0.9rem;
+    margin: 12px 0;
+    text-align: center;
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-6px); }
+    75% { transform: translateX(6px); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .auth-box {
+        padding: 30px;
+        max-width: 90%;
+    }
+    
+    .switch button {
+        padding: 10px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-box {
+        padding: 25px;
+        margin: 15px;
+    }
+    
+    form input {
+        padding: 12px 15px 12px 45px;
+        font-size: 0.95rem;
+    }
+    
+    #loginForm,
+    #registerForm {
+        width: calc(100% - 50px);
+    }
+    
+    .switch button {
+        padding: 8px 25px;
+        font-size: 0.95rem;
+    }
+}
